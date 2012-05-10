@@ -73,17 +73,17 @@ public class OptionDialog extends JDialog implements ActionListener {
 	 */
 	@SuppressWarnings("unchecked")
 	public OptionDialog() {
-		setTitle("Technic Launcher Settings");
+		setTitle("Ph3lltopia Launcher Settings");
 
 		ButtonGroup group = new ButtonGroup();
 		group.add(devBuilds);
 		group.add(recBuilds);
 		group.add(customBuilds);
 
-		buildInfo.setText("Technic Launcher Build " + Main.build);
+		buildInfo.setText("Ph3lltopia Launcher Build " + Main.build);
 		buildInfo.setOpaque(true);
 		buildInfo.setForeground(Color.DARK_GRAY);
-		buildInfo.setToolTipText("Created by the Spout Development Team and Modified by the Technic Team. Licensed under the LGPL. Source code is available at www.github.com/SpoutDev");
+		buildInfo.setToolTipText("Created by the Spout Development Team and Modified by the Technic Team and Parkerkane. Licensed under the LGPL. Source code is available at www.github.com/SpoutDev");
 
 		customBuilds.setToolTipText("Only use if you know what you are doing!");
 		devBuilds.setToolTipText("Development builds are often unstable and buggy. Use at your own risk!");

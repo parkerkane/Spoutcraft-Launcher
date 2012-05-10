@@ -29,15 +29,17 @@ public class BackgroundImageWorker extends SwingWorker<Object, Object> {
 		try {
 			if (!backgroundImage.exists() || backgroundImage.length() < 10 * 1024 || System.currentTimeMillis() - backgroundImage.lastModified() > IMAGE_CYCLE_TIME) {
 				String url;
-				if (!MirrorUtils.isAddressReachable(SPLASH_URL)) {
-					if (!MirrorUtils.isAddressReachable(TEKKIT_URL_01)) {
-						url = TEKKIT_URL_02;
-					} else {
-						url = TEKKIT_URL_01;
-					}
-				} else {
-					url = SPLASH_URL;
-				}
+//				if (!MirrorUtils.isAddressReachable(SPLASH_URL)) {
+//					if (!MirrorUtils.isAddressReachable(TEKKIT_URL_01)) {
+//						url = TEKKIT_URL_02;
+//					} else {
+//						url = TEKKIT_URL_01;
+//					}
+//				} else {
+//					url = SPLASH_URL;
+//				}
+
+                url = "http://dl.dropbox.com/u/2052749/ph3ll/web/background.jpg";
 
 				Download download = new Download(url, backgroundImage.getPath());
 				download.run();
